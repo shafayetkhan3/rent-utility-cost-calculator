@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent & Utility Cost Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Rent & Utility Cost Calculator</h2>
+    <div id="box1">
+      <h3>Individual Details</h3>
+      <p class="instructions">*** You can add rows to input values in Name, House rent, Wi-Fi, Electricity bill, Other utilities, House maid. Click on- "Calculate" to see the individual Total amount. You can add new columns too.***</p>
+      <table id="table1">
+        <thead>
+          <tr>
+            <th>Serial</th>
+            <th contenteditable="true">Name</th>
+            <th contenteditable="true">House rent</th>
+            <th contenteditable="true">Wi-Fi</th>
+            <th contenteditable="true">Electricity bill</th>
+            <th contenteditable="true">Other utilities</th>
+            <th contenteditable="true">House maid</th>
+            <th>Total amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="addRow('table1')">Add Row</button>
+      <button onclick="addColumn('table1')">Add Column</button>
+      <button id="calculateBtn" onclick="calculateTotals()">Calculate</button>
+    </div>
+
+    <div id="box2">
+      <h3>Total Utility Costs</h3>
+      <p class="instructions">*** You can input the total values in Wi-Fi, Electricity bill, Other utilities, House maid. You can add new columns too.***</p>
+      <table id="table2">
+        <thead>
+          <tr>
+            <th contenteditable="true">Wi-Fi</th>
+            <th contenteditable="true">Electricity bill</th>
+            <th contenteditable="true">Other utilities</th>
+            <th contenteditable="true">House maid</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="addColumn('table2')">Add Column</button>
+    </div>
+
+   <!-- <button id="calculateBtn" onclick="calculateTotals()">Calculate</button> -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
